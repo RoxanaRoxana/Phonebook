@@ -7,11 +7,13 @@
   padding-top: 10px;
   padding-bottom: 10px;
   width: 150px;
+  background-color: white;
 }
 
 .addForm__input {
   margin-top: 5px;
 }
+
 
 .form__label {
   display: flex;
@@ -24,4 +26,8 @@
   width: 80px;
   font-size: 10px;
   flex-wrap: nowrap;
+}
+.form_section{
+  display: flex;
+  justify-content: center;
 }

@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { signupUser } from '../services/api';
+import { signupUser } from '../../services/api';
+import styles from './Register.module.css'
 
 const Register = () => {
   const nameInputRef = useRef();
@@ -39,29 +40,50 @@ const Register = () => {
   };
 
   return (
-    <section >
-      <h1>Register</h1>
-      <form onSubmit={submitHandler}>
-        <div >
-          <label htmlFor="name">Your name</label>
-          <input type="text" id="name" required ref={nameInputRef} />
-        </div>
-        <div >
-          <label htmlFor="email">Your e-mail</label>
-          <input type="email" id="email" required ref={emailInputRef} />
-        </div>
-        <div >
-          <label htmlFor="password">Your password</label>
+    <section className={styles.register_section}>
+      <h1 className={styles.title}>Register</h1>
+      <form className={styles.register_form} onSubmit={submitHandler}>
+      
+          <label className={styles.register_label} htmlFor="name">
+            Name
+          </label>
           <input
+            className={styles.register_input}
+            type="text"
+            id="name"
+            required
+            ref={nameInputRef}
+          />
+        
+        
+          <label className={styles.register_label} htmlFor="email">
+            E-mail
+          </label>
+          <input
+            className={styles.register_input}
+            type="email"
+            id="email"
+            required
+            ref={emailInputRef}
+          />
+        
+      
+          <label className={styles.register_label} htmlFor="password">
+            Password
+          </label>
+          <input
+            className={styles.register_input}
             type="password"
             id="password"
             required
             ref={passwordInputRef}
           />
-        </div>
-        <div >
-          <button type="submit">Register</button>
-        </div>
+        
+        
+          <button className={styles.register_button} type="submit">
+            Register
+          </button>
+        
       </form>
     </section>
   );

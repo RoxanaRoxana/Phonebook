@@ -3,9 +3,9 @@ import PrivateRoute from 'routes/PrivateRoute';
 import { Routes, Route } from 'react-router-dom';
 import RegisterPage from 'pages/RegisterPage';
 import LoginPage from 'pages/LoginPage';
-import UserMenu from 'components/UserMenu';
+import UserMenu from 'components/userMenu/UserMenu';
 import HomePage from 'pages/HomePage';
-import Layout from 'components/Layout';
+import Layout from 'components/layout/Layout';
 
 export default function App() {
   return (

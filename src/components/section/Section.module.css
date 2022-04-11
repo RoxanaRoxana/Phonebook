@@ -1,0 +1,6 @@
+.titles{
+    display: flex;
+    justify-content: center;
+    color: rgb(128, 0, 128);
+    background-color: rgb(238, 130, 238);
+}

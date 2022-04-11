@@ -1,0 +1,50 @@
+.navigation {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  max-width: 100%;
+  height: 5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  background-color: gray;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  color: rgb(128, 0, 128);
+}
+
+.basic {
+  color: rgb(238, 130, 238);
+}
+
+.navigation_list {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation_item {
+  margin-right: 15px;
+}
+
+.logout_button {
+  margin-left: 15px;
+  background-color: rgb(238, 130, 238);
+  border-radius: 8px;
+  border-style: none;
+  padding: 3px 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.logout_button:hover,
+.logout_button:focus {
+  background-color: rgb(128, 0, 128);
+}

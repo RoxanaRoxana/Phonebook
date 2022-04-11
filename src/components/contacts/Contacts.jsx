@@ -25,7 +25,8 @@ export default function Contacts() {
   contacts = getFilteredContacts();
 
   return (
-    <>
+    
+      <div className={styles.contacts_section}>
       <ul className={styles.contact__list}>
         {contacts.map(item => (
           <Contact
@@ -36,30 +37,11 @@ export default function Contacts() {
           />
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 
-// export const Contacts = ({ contacts, onDeleteContact }) => {
-//   return (
-//     <>
-//       <ul className={styles.contact__list}>
-//         {contacts.map(({ id, name, number }) => (
-//           <li key={id} className={styles.contact__item}>
-//             <p className={styles.contact__text}>{name}:</p>
-//             <p className={styles.contact__text}>{number}</p>
-//             <button
-//               onClick={() => onDeleteContact(id)}
-//               className={styles.contact__button}
-//             >
-//               Delete
-//             </button>
-//           </li>
-//         ))}
-//       </ul>
-//     </>
-//   );
-// };
+
 
 Contacts.propTypes = {
   contacts: PropTypes.array,

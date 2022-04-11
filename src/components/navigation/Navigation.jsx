@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from 'services/api';
+import styles from './Navigation.module.css'
 
 const Navigation = () => {
   const dispatch = useDispatch();
@@ -13,23 +14,23 @@ const Navigation = () => {
   };
 
   return (
-    <header>
+    <header className={styles.navigation}>
       <NavLink
-        // className={navData =>
-        //   navData.isActive ? `${classes.active}` : `${classes.logo}`
-        // }
+        className={navData =>
+          navData.isActive ? `${styles.active}` : `${styles.basic}`
+        }
         to="/"
       >
         Home page
       </NavLink>
-      <nav>
-        <ul>
+      <nav className={styles.navigation_panel}>
+        <ul className={styles.navigation_list}>
           {!isLoggedIn && (
-            <li>
+            <li className={styles.navigation_item}>
               <NavLink
-                // className={navData =>
-                //   navData.isActive ? `${classes.active}` : `${classes.logo}`
-                // }
+                className={navData =>
+                  navData.isActive ? `${styles.active}` : `${styles.basic}`
+                }
                 to={'/register'}
               >
                 Register
@@ -39,9 +40,9 @@ const Navigation = () => {
           {!isLoggedIn && (
             <li>
               <NavLink
-                // // className={navData =>
-                // //   navData.isActive ? `${classes.active}` : `${classes.logo}`
-                // // }
+                className={navData =>
+                  navData.isActive ? `${styles.active}` : `${styles.basic}`
+                }
                 to={'/login'}
               >
                 Login
@@ -51,16 +52,16 @@ const Navigation = () => {
           {isLoggedIn && (
             <li>
               <NavLink
-                // className={navData =>
-                //   navData.isActive ? `${classes.active}` : `${classes.logo}`
-                // }
+                className={navData =>
+                  navData.isActive ? `${styles.active}` : `${styles.basic}`
+                }
                 to={'/contacts'}
               >
                 Contacts
               </NavLink>
             </li>
           )}
-          {isLoggedIn && <button onClick={logoutHandler}>Logout</button>}
+          {isLoggedIn && <button className={styles.logout_button} onClick={logoutHandler}>Logout</button>}
         </ul>
       </nav>
     </header>

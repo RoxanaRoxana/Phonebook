@@ -13,3 +13,8 @@
 .contact__text {
   margin-right: 8px;
 }
+
+.contacts_section{
+  display: flex;
+  justify-content: center;
+}

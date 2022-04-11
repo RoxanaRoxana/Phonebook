@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { signupUser, loginUser, logoutUser } from 'services/api';
 
+ const initialToken = localStorage.getItem("token");
+
 const initialState = {
-  token: null,
+  token: initialToken,
   loading: false,
   userData: {},
   isLoggedIn: false,

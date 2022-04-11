@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { loginUser } from '../services/api';
+import { loginUser } from '../../services/api';
+import styles from './Login.module.css'
 
 
 const Login = () => {
@@ -38,16 +39,16 @@ const Login = () => {
     form.reset();
   };
   return (
-    <section >
-      <h1>Login</h1>
-      <form onSubmit={submitHandler}>
+    <section className={styles.login_section}>
+      <h1 className={styles.title} >Login</h1>
+      <form className={styles.login_form} onSubmit={submitHandler}>
         <div >
-          <label htmlFor="email">Your e-mail</label>
-          <input type="email" id="email" required ref={emailInputRef} />
+          <label className={styles.login_label} htmlFor="email">E-mail</label>
+          <input className={styles.login_input} type="email" id="email" required ref={emailInputRef} />
         </div>
         <div >
-          <label htmlFor="password">Your password</label>
-          <input
+          <label className={styles.login_label} htmlFor="password">Password</label>
+          <input className={styles.login_input}
             type="password"
             id="password"
             required
@@ -55,7 +56,7 @@ const Login = () => {
           />
         </div>
         <div >
-          <button type="submit">Login</button>
+          <button className={styles.login_button} type="submit">Login</button>
         </div>
       </form>
     </section>

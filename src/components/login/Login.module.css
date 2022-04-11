@@ -1,0 +1,30 @@
+.login_section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    color: rgb(128, 0, 128);
+}
+
+.login_button{
+     margin-left: 15px;
+  background-color: rgb(128, 0, 128);
+  border-radius: 8px;
+  border-style: none;
+  padding: 3px 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.login_form{
+    display: flex;
+    
+}
+
+.login_input{
+    margin-left: 5px;
+}
+.login_label{
+    margin-left: 5px;
+}

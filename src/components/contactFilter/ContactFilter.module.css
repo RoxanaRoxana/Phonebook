@@ -1,9 +1,15 @@
 .contactFilter{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .filterInput{
     width: 130px;
     margin-top: 8px;
+}
+
+.filter_section{
+    display: flex;
+    justify-content: center;
 }

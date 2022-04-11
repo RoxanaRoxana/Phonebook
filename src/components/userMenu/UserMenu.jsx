@@ -2,10 +2,10 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from 'services/api';
-import Section from './Section';
-import AddForm from './AddForm';
-import ContactsFilter from './ContactFilter';
-import Contacts from './Contacts';
+import Section from '../section/Section';
+import AddForm from '../addForm/AddForm';
+import ContactsFilter from '../contactFilter/ContactFilter';
+import Contacts from '../contacts/Contacts';
 
 
 

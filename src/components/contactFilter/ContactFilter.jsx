@@ -11,15 +11,17 @@ export default function ContactsFilter({ value }) {
   };
 
   return (
-    <label className={styles.contactFilter}>
-      Find contacts by name
-      <input
-        type="text"
-        value={value}
-        onChange={filterContact}
-        className={styles.filterInput}
-      />
-    </label>
+    <div className={styles.filter_section}>
+      <label className={styles.contactFilter}>
+        Find contacts by name
+        <input
+          type="text"
+          value={value}
+          onChange={filterContact}
+          className={styles.filterInput}
+        />
+      </label>
+    </div>
   );
 }
 

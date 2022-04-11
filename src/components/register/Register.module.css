@@ -1,0 +1,30 @@
+.register_section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    color: rgb(128, 0, 128);
+}
+
+.register_button{
+  background-color: rgb(128, 0, 128);
+  border-radius: 8px;
+  border-style: none;
+  padding: 3px 5px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.register_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.register_input{
+    margin-bottom: 5px;
+}
+.register_label{
+    margin-bottom: 5px;
+}
