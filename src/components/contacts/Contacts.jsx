@@ -7,16 +7,14 @@ import Contact from './Contact';
 // import { fetchContacts } from 'services/api';
 
 export default function Contacts() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   let contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
-  const { token } = useSelector((state) => state.users);
+  // const { token } = useSelector((state) => state.users);
 
   // useEffect(() => {
   //   dispatch(fetchContacts({token}));
   // }, [dispatch, token]);
-
- 
 
   const getFilteredContacts = () => {
     return contacts.filter(contact =>
@@ -27,8 +25,7 @@ export default function Contacts() {
   contacts = getFilteredContacts();
 
   return (
-    
-      <div className={styles.contacts_section}>
+    <div className={styles.contacts_section}>
       <ul className={styles.contact__list}>
         {contacts.map(item => (
           <Contact
@@ -42,8 +39,6 @@ export default function Contacts() {
     </div>
   );
 }
-
-
 
 Contacts.propTypes = {
   contacts: PropTypes.array,
