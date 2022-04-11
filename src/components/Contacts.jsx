@@ -14,7 +14,7 @@ export default function Contacts() {
 
   useEffect(() => {
     dispatch(fetchContacts({token}));
-  }, [dispatch, {token}]);
+  }, [dispatch, token]);
 
   const getFilteredContacts = () => {
     return contacts.filter(contact =>
