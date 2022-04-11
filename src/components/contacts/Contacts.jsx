@@ -3,8 +3,8 @@ import styles from './Contacts.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFilter, selectContacts } from 'features/contactSlice';
 import Contact from './Contact';
-import { useEffect } from 'react';
-import { fetchContacts } from 'services/api';
+// import { useEffect } from 'react';
+// import { fetchContacts } from 'services/api';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -12,9 +12,11 @@ export default function Contacts() {
   const filter = useSelector(selectFilter);
   const { token } = useSelector((state) => state.users);
 
-  useEffect(() => {
-    dispatch(fetchContacts({token}));
-  }, [dispatch, token]);
+  // useEffect(() => {
+  //   dispatch(fetchContacts({token}));
+  // }, [dispatch, token]);
+
+ 
 
   const getFilteredContacts = () => {
     return contacts.filter(contact =>
