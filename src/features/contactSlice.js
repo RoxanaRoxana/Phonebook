@@ -2,7 +2,6 @@ import {  createSlice } from '@reduxjs/toolkit';
 import { fetchContacts, addContact, deleteContact } from 'services/api';
 
 
-
 const initialState = {
   contactsList: [],
   status: null,
