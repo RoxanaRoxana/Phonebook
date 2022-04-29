@@ -11,7 +11,7 @@ export default function App() {
   return (
     <Layout>
       <Routes>
-       // <Route index element={<HomePage />} />
+      
         <Route path="/" element={<HomePage />} />
 
         <Route path="/register" element={<RegisterPage />} />
