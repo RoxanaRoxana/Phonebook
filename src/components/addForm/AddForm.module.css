@@ -1,13 +1,7 @@
 .addForm__editor {
   display: flex;
   flex-direction: column;
-  border: solid 2px grey;
-  padding-left: 5px;
-  padding-right: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   width: 150px;
-  background-color: white;
 }
 
 .addForm__input {
@@ -23,9 +17,13 @@
 
 .add__button {
   margin-top: 15px;
-  width: 80px;
   font-size: 10px;
-  flex-wrap: nowrap;
+  background-color: rgb(128, 0, 128);
+  border-radius: 8px;
+  border-style: none;
+  padding: 3px 5px;
+  color: #ffffff;
+  cursor: pointer;
 }
 .form_section{
   display: flex;

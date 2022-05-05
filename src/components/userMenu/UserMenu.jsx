@@ -6,6 +6,7 @@ import Section from '../section/Section';
 import AddForm from '../addForm/AddForm';
 import ContactsFilter from '../contactFilter/ContactFilter';
 import Contacts from '../contacts/Contacts';
+import styles from './UserMenu.module.css'
 
 
 
@@ -17,15 +18,18 @@ const UserMenu = () => {
       }, [dispatch, token]);
 
   return (
-    <div>
-      <Section title="Phonebook">
-        <AddForm />
-      </Section>
-
-      <Section title="Contacts">
-        <ContactsFilter />
-        <Contacts />
-      </Section>
+    <div className={styles.menu}>
+      <div className={styles.section}>
+        <Section title="Add new contact">
+          <AddForm />
+        </Section>
+      </div>
+      <div className={styles.section}>
+        <Section title="Your contacts">
+          <ContactsFilter />
+          <Contacts />
+        </Section>
+      </div>
     </div>
   );
 }
