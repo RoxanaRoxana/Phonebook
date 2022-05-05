@@ -12,7 +12,7 @@ export default function App() {
     <Layout>
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="/" element={<HomePage />} />
+        <Route path="/Phonebook" element={<HomePage />} />
 
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
