@@ -4,6 +4,7 @@ import styles from './AddForm.module.css';
 import { addContact } from 'services/api';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 export default function AddForm() {
   const nameInputId = nanoid();
@@ -15,16 +16,26 @@ export default function AddForm() {
   const nameInputRef = useRef();
   const numberInputRef = useRef();
 
+
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
     const { name } = e.target;
     for (let contact of contactsList) {
       if (contact.name === name.value) {
-        alert(`${name.value} is already on the contacts list`);
+        toast.error(`${name.value} is already on the contacts list`, {
+          position: 'top-center',
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         return;
       }
     }
+
     const enteredName = nameInputRef.current.value;
     const enteredNumber = numberInputRef.current.value;
 
@@ -36,8 +47,6 @@ export default function AddForm() {
     dispatch(addContact({ token, userData }));
     form.reset();
   };
-
-
 
   return (
     <div className={styles.form_section}>
@@ -68,6 +77,7 @@ export default function AddForm() {
             ref={numberInputRef}
           />
         </label>
+
         <button type="submit" className={styles.add__button}>
           Add contact
         </button>
@@ -75,7 +85,6 @@ export default function AddForm() {
     </div>
   );
 }
-
 
 AddForm.propTypes = {
   name: PropTypes.string,

@@ -6,10 +6,23 @@ import LoginPage from 'pages/LoginPage';
 import UserMenu from 'components/userMenu/UserMenu';
 import HomePage from 'pages/HomePage';
 import Layout from 'components/layout/Layout';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App() {
   return (
     <Layout>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/Phonebook" element={<HomePage />} />

@@ -1,14 +1,14 @@
-.login_section{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.login_section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.title{
-    color: rgb(128, 0, 128);
+.title {
+  color: rgb(128, 0, 128);
 }
 
-.login_button{
-     margin-left: 15px;
+.login_button {
+  margin-left: 15px;
   background-color: rgb(128, 0, 128);
   border-radius: 8px;
   border-style: none;
@@ -17,14 +17,22 @@
   cursor: pointer;
 }
 
-.login_form{
-    display: flex;
-    
+.login_form {
+  display: flex;
 }
 
-.login_input{
-    margin-left: 5px;
+.login_input {
+  margin-left: 5px;
+  border-radius: 4px;
 }
-.login_label{
-    margin-left: 5px;
+.login_label {
+  margin-left: 30px;
+}
+
+.photo {
+  width: 306px;
+  height: 400px;
+  transform: rotate(-10deg);
+  margin-top: 100px;
+  filter: invert(60%);
 }

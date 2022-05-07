@@ -6,16 +6,14 @@ import Section from '../section/Section';
 import AddForm from '../addForm/AddForm';
 import ContactsFilter from '../contactFilter/ContactFilter';
 import Contacts from '../contacts/Contacts';
-import styles from './UserMenu.module.css'
-
-
+import styles from './UserMenu.module.css';
 
 const UserMenu = () => {
-      const { token } = useSelector(state => state.users);
-      const dispatch = useDispatch();
-      useEffect(() => {
-        dispatch(fetchContacts(token));
-      }, [dispatch, token]);
+  const { token } = useSelector(state => state.users);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchContacts(token));
+  }, [dispatch, token]);
 
   return (
     <div className={styles.menu}>
@@ -32,8 +30,6 @@ const UserMenu = () => {
       </div>
     </div>
   );
-}
+};
 
-export default UserMenu
-
-
+export default UserMenu;
