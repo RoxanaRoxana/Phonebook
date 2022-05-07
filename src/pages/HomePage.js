@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className={styles.login_section}>
       <h2 className={styles.title}> Phonebook </h2>
       <div>
-        <img className={styles.photo} src={image} />
+        <img className={styles.photo} src={image} alt="Phonebok icon" />
       </div>
     </div>
   );
