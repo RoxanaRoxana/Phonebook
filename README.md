@@ -1,4 +1,4 @@
 # Phonebook
 Phonebook
 
-Technologies used: ⦁ React  ⦁ redux
+Technologies used: ⦁ React.js  ⦁ redux
